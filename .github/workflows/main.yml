@@ -1,1 +1,26 @@
-npm start
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+      tags:
+        description: 'Test scenario tags'
+        required: false
+        type: boolean
+      enviroment:
+        description: 'Enviroment to run tests against'
+        type: enviroment
+        required: true
+
+
+jobs: 
+  log-the-inputs:
+    runs-on: ubuntu-latest
+    steps:
