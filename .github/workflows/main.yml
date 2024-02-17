@@ -24,3 +24,12 @@ jobs:
   log-the-inputs:
     runs-on: ubuntu-latest
     steps:
+      - run: |
+        echo "Log level: $LEVEL"
+        echo "Tags: $TAGS"
+        echo "Enviroment: $ENVIROMENT"
+      env:
+        LEVEL: ${{ inputs.logLevel }}
+        TAGS: ${{ inputs.tags }}
+        ENVIROMENT: ${{ inputs.enviroment }}
+        
