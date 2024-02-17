@@ -33,3 +33,4 @@ jobs:
         TAGS: ${{ inputs.tags }}
         ENVIROMENT: ${{ inputs.enviroment }}
         
+npm start
